@@ -3,7 +3,7 @@ library(jpeg)
 library(RColorBrewer)
 
 radius <- 100 #pixels
-pic <- readJPEG("/Users/peets/Downloads/我的照片2.jpg") 
+pic <- readJPEG("./images/我的照片2.jpg") 
 dim (pic)
 p <- pic [600:1976, 1:1650, 1:3]
 #####################################
@@ -165,4 +165,4 @@ ggplot(data=p2$projected_spiral, aes(x=x)) +
   theme(legend.position="none", panel.background=element_rect(fill=pal[1]))
 
 
-ggsave("p.png", path="../images")
+ggsave("p.png", path="./images")
